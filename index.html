@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <script type="text/javascript" src="./node_modules/vue/dist/vue.js" ></script>
+    <title>App</title>
+</head>
+<body>
+    <div id="app">
+        <button @click="newGame">
+          NOUVELLE PARTIE
+        </button>
+        <hr>
+          <h4> {{ score }} </h4>
+        <hr>
+        <div>
+          <span class="carre" @click="selectSquare('topLeft') " :class="{ blue: topLeft }"></span>
+          <span class="carre" @click="selectSquare('topRight') " :class="{ red: topRight }"></span>
+        </div>
+        <div>
+          <span class="carre" @click="selectSquare('bottomLeft') " :class="{ green: bottomLeft }"></span>
+          <span class="carre" @click="selectSquare('bottomRight') " :class="{ yellow: bottomRight }"></span>
+        </div>
+        <hr/>
+        <span> Sequence : </span>
+        <pre>{{ sequence }}</pre>
+    </div>
+    <script type="text/javascript" src="./index.js" ></script>
+</body>
+</html>
